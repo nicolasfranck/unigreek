@@ -9,6 +9,6 @@ binmode STDOUT,":utf8";
 
 my $line;
 while($line = <STDIN>){
-  my $greek = Greek::map_str($line);
+  my $greek = Greek::from_transliteration($line);
   print $greek;
 }
