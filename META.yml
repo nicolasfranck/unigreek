@@ -1,0 +1,26 @@
+---
+abstract: 'convert transliterated Greek (ascii) to real Greek letters in utf8 (and back). See http://www.typegreek.com/'
+author:
+  - 'Nicolas Franck <nicolas.franck@ugent.be>'
+build_requires:
+  Test::Exception: 0
+  Test::More: 0
+  Unicode::Normalize: 0
+configure_requires:
+  Module::Build: 0.4
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: greek-transliterate
+provides:
+  Greek::Transliterate:
+    file: lib/Greek/Transliterate.pm
+    version: 0.1
+requires:
+  perl: v5.10.1
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.1

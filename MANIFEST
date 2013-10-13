@@ -1,0 +1,9 @@
+Build.PL
+lib/Greek/Transliterate.pm
+MANIFEST			This list of files
+t/1_use.t
+t/2_from_transliteration.t
+Makefile.PL
+LICENSE
+META.yml
+META.json

@@ -1,0 +1,48 @@
+{
+   "abstract" : "convert transliterated Greek (ascii) to real Greek letters in utf8 (and back). See http://www.typegreek.com/",
+   "author" : [
+      "Nicolas Franck <nicolas.franck@ugent.be>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "greek-transliterate",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::Exception" : 0,
+            "Test::More" : 0,
+            "Unicode::Normalize" : 0
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.4"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "perl" : "v5.10.1"
+         }
+      }
+   },
+   "provides" : {
+      "Greek::Transliterate" : {
+         "file" : "lib/Greek/Transliterate.pm",
+         "version" : "0.1"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.1"
+}
