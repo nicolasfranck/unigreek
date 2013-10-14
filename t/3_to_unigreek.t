@@ -5,7 +5,7 @@ use warnings;
 use Test::More;
 use FindBin;
 use lib "$FindBin::Bin/../lib";
-use UniGreek;
+use UniGreek qw(to_unigreek);
 use Unicode::Normalize;
 
 binmode STDIN,":utf8";
@@ -18,7 +18,7 @@ my %good_mapping = (
 );
 plan tests => scalar(keys %good_mapping);
 for my $utf8(sort keys %good_mapping){
-  my $got = UniGreek::to_unigreek($utf8);
+  my $got = to_unigreek($utf8);
   my $expected = $good_mapping{$utf8};
   is($got,$expected,"comparing '$got' <=> '$expected'");
 }

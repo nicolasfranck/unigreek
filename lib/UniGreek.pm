@@ -4,6 +4,9 @@ use strict;
 use warnings;
 use feature qw(:5.10);
 use Unicode::Normalize;
+use base qw(Exporter);
+
+our @EXPORT_OK = qw(from_unigreek to_unigreek);
 
 our $VERSION="0.1";
 our %unigreek_to_utf8;
