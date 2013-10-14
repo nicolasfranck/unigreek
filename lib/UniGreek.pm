@@ -805,4 +805,46 @@ BEGIN {
   }
 }
 
+=head1 NAME
+
+  UniGreek - This module converts between an ascii-representation of polytonic Greek
+  (i.e. old Greek) and the utf8-representation.
+
+  The ascii-representation is taken from typegreek.com (http://www.typegreek.com), a web-based
+  application, made by Randy Hoyt, that converts Roman lettercombination to Greek in utf8-format.
+
+=head1 SYNOPSIS
+
+  use strict;
+  use utf8;
+  use feature qw(:5.10);
+  use UniGreek qw(from_unigreek to_unigreek);
+
+  binmode STDOUT,":utf8";
+
+  my $unigreek = "Mh=nin a)/eide qea/";
+  #result: Μῆνιν ἄειδε θεά
+  say UniGreek::from_unigreek($unigreek);
+
+  my $utf8 = "Μῆνιν ἄειδε θεά";
+  #result: Mh=nin a)/eide qea/
+  say UniGreek::to_unigreek($utf8);
+
+=head1 METHODS
+
+=head2 from_unigreek(<ascii-string>)
+  
+  Converts from the ascii-representation to the real Greek letters in utf8.  
+
+=head2 to_unigreek(<utf8-greek>)
+
+  Converts from the Greek letters in utf8 to the ascii-representation
+
+=head1 SEE ALSO
+
+L<http://www.typegreek.com>
+L<http://unigreek.phildow.net/>
+L<http://www.mythfolklore.net/bibgreek/resources/typing.htm>
+
+=cut
 1;
