@@ -5,11 +5,12 @@ use warnings;
 use Test::More;
 use FindBin;
 use lib "$FindBin::Bin/../lib";
-use Greek::Transliterate;
+use UniGreek;
 use Unicode::Normalize;
 
 binmode STDIN,":utf8";
 binmode STDOUT,":utf8";
+binmode STDERR,":utf8";
 
 my %good_mapping = (
   "Mh=nin a)/eide qea/" => NFC("Μῆνιν ἄειδε θεά"),
@@ -17,7 +18,7 @@ my %good_mapping = (
 );
 plan tests => scalar(keys %good_mapping);
 for my $ascii(sort keys %good_mapping){
-  my $got = Greek::Transliterate::from_transliteration($ascii);
+  my $got = UniGreek::from_unigreek($ascii);
   my $expected = $good_mapping{$ascii};
   is($got,$expected);
 }
