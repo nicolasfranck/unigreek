@@ -8,7 +8,7 @@ use base qw(Exporter);
 
 our @EXPORT_OK = qw(from_unigreek to_unigreek);
 
-our $VERSION="0.1";
+our $VERSION="0.2";
 our %unigreek_to_utf8;
 our %utf8_to_unigreek;
 
@@ -804,6 +804,7 @@ BEGIN {
     $utf8_to_unigreek{ $unigreek_to_utf8{$key}->[0] } = $key;
   }
 }
+=encoding utf-8
 
 =head1 NAME
 

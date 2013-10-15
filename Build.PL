@@ -15,13 +15,18 @@ my $build = Module::Build->new(
     'Unicode::Normalize' => 0,
     'FindBin' => 0
   },
-  configure_requires => { 'Module::Build' => 0.40 },
+  #configure_requires => { 'Module::Build' => 0.40 },
   requires => {
     'perl' => '5.10.1',
   },
   create_license => 1,
   dist_version_from   => 'lib/UniGreek.pm',
-  create_makefile_pl => 'traditional'
+  create_makefile_pl => 'traditional',
+  meta_merge => {
+    resources => {
+      repository => 'https://github.com/nicolasfranck/unigreek'
+    }
+  }
 );
 
 $build->create_build_script;
