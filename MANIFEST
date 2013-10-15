@@ -7,6 +7,5 @@ README.md
 t/1_use.t
 t/2_from_unigreek.t
 t/3_to_unigreek.t
-Makefile.PL
 META.yml
 META.json
